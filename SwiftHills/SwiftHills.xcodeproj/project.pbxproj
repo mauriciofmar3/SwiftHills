@@ -15,6 +15,7 @@
 		5CEA9CAF1AA008DD000C4B54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CEA9CAE1AA008DD000C4B54 /* Images.xcassets */; };
 		5CEA9CB21AA008DD000C4B54 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CEA9CB01AA008DD000C4B54 /* LaunchScreen.xib */; };
 		5CEA9CBE1AA008DD000C4B54 /* SwiftHillsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA9CBD1AA008DD000C4B54 /* SwiftHillsTests.swift */; };
+		5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		5CEA9CB71AA008DD000C4B54 /* SwiftHillsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftHillsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEA9CBC1AA008DD000C4B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CEA9CBD1AA008DD000C4B54 /* SwiftHillsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHillsTests.swift; sourceTree = "<group>"; };
+		5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				5CEA9CA31AA008DD000C4B54 /* AppDelegate.swift */,
 				5CEA9CA51AA008DD000C4B54 /* GameScene.sks */,
+				5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */,
 				5CEA9CA71AA008DD000C4B54 /* GameScene.swift */,
 				5CEA9CA91AA008DD000C4B54 /* GameViewController.swift */,
 				5CEA9CAB1AA008DD000C4B54 /* Main.storyboard */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */,
 				5CEA9CA81AA008DD000C4B54 /* GameScene.swift in Sources */,
 				5CEA9CAA1AA008DD000C4B54 /* GameViewController.swift in Sources */,
 				5CEA9CA41AA008DD000C4B54 /* AppDelegate.swift in Sources */,
