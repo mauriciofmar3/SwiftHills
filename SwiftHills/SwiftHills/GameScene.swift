@@ -9,14 +9,30 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var ship : SKSpriteNode!
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+//        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
+//        myLabel.text = "Hello, World!";
+//        myLabel.fontSize = 65;
+//        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+//        
+        //        self.addChild(myLabel)
+        self.backgroundColor = SKColor.blackColor()
+
+        self.setupBackground()
+        self.setupShip()
+    }
+    
+    func setupShip() {
+        ship = SKSpriteNode(imageNamed: "SpaceFlier_sm_1.png")
+        ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
+        self.addChild(ship)
+    }
+    
+    func setupBackground() {
         
-        self.addChild(myLabel)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
