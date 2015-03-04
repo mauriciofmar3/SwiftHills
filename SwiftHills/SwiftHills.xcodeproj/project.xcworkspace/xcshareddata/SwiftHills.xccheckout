@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>32BE913A-1D3C-46C1-862E-098B8D960E55</string>
+	<string>F43E4BCA-4744-4AC4-8E00-255818CEE2C4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SwiftHills</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>57E474482E43167E993E2E9A15F9AD87809886FB</key>
-		<string>https://github.com/mauriciofmar3/SwiftHills.git</string>
+		<string>github.com:mauriciofmar3/SwiftHills.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SwiftHills/SwiftHills.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mauriciofmar3/SwiftHills.git</string>
+	<string>github.com:mauriciofmar3/SwiftHills.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     var ship : SKSpriteNode!
+    var parallaxSpaceDust : ParallaxNode!
+    var parallaxNodeBackgrounds : ParallaxNode!
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -32,7 +34,17 @@ class GameScene: SKScene {
     }
     
     func setupBackground() {
-        
+        let parallaxBackgroundNames = ["bg_galaxy.png", "bg_planetsunrise.png",
+            "bg_spacialanomaly.png", "bg_spacialanomaly2.png"]
+        let planetSizes = CGSizeMake(200.0, 200.0)
+        parallaxNodeBackgrounds = ParallaxNode(files: parallaxBackgroundNames, size: planetSizes, pointsPerSecondSpeed: 10.0)
+        parallaxNodeBackgrounds.position = CGPointMake(size.width/2.0, size.height/2.0)
+        parallaxNodeBackgrounds.randomizeNodesPositions()
+        self.addChild(parallaxNodeBackgrounds)
+        let parallaxBackground2Names = ["bg_front_spacedust.png", "bg_front_spacedust.png"]
+        parallaxSpaceDust = ParallaxNode(files: parallaxBackground2Names, size: size, pointsPerSecondSpeed: 25.0)
+        parallaxSpaceDust.position = CGPointMake(0, 0);
+        self.addChild(parallaxSpaceDust)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -56,6 +68,7 @@ class GameScene: SKScene {
     }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+        parallaxNodeBackgrounds.update(currentTime)
+        parallaxSpaceDust.update(currentTime)
     }
 }
