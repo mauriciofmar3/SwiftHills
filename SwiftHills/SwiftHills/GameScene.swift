@@ -17,10 +17,11 @@ class GameScene: SKScene {
         self.backgroundColor = SKColor.blackColor()
 
         self.setupBackground()
-        self.setupShip()
+        self.setupDillo()
+        self.setupWall()
     }
     
-    func setupShip() {
+    func setupDillo() {
         ship = SKSpriteNode(imageNamed: "SpaceFlier_sm_1.png")
         ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
         self.addChild(ship)
@@ -38,6 +39,13 @@ class GameScene: SKScene {
         parallaxSpaceDust = ParallaxNode(files: parallaxBackground2Names, size: size, pointsPerSecondSpeed: 25.0)
         parallaxSpaceDust.position = CGPointMake(0, 0);
         self.addChild(parallaxSpaceDust)
+    }
+    
+    func setupWall() {
+        let node = SKNode()
+        node.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRectMake(0.0, self.frame.size.height - 1.0,
+                                                                      self.frame.size.width, 1.0))
+        self.addChild(node)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

@@ -41,6 +41,8 @@
 		729781AA1AA3013800648132 /* shake.caf in Resources */ = {isa = PBXBuildFile; fileRef = 729781911AA3013800648132 /* shake.caf */; };
 		729781AB1AA3013800648132 /* SpaceGame.caf in Resources */ = {isa = PBXBuildFile; fileRef = 729781921AA3013800648132 /* SpaceGame.caf */; };
 		729781AC1AA3013800648132 /* SpaceShooter.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 729781931AA3013800648132 /* SpaceShooter.atlas */; };
+		729781B41AA81F0800648132 /* Dillo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729781B31AA81F0800648132 /* Dillo.swift */; };
+		729781B61AA81F1800648132 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729781B51AA81F1800648132 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		729781911AA3013800648132 /* shake.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shake.caf; sourceTree = "<group>"; };
 		729781921AA3013800648132 /* SpaceGame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpaceGame.caf; sourceTree = "<group>"; };
 		729781931AA3013800648132 /* SpaceShooter.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SpaceShooter.atlas; sourceTree = "<group>"; };
+		729781B31AA81F0800648132 /* Dillo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dillo.swift; sourceTree = "<group>"; };
+		729781B51AA81F1800648132 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				5CEA9CA31AA008DD000C4B54 /* AppDelegate.swift */,
 				5CEA9CA51AA008DD000C4B54 /* GameScene.sks */,
 				5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */,
+				729781B31AA81F0800648132 /* Dillo.swift */,
+				729781B51AA81F1800648132 /* Coin.swift */,
 				5CEA9CA71AA008DD000C4B54 /* GameScene.swift */,
 				5CEA9CA91AA008DD000C4B54 /* GameViewController.swift */,
 				5CEA9CAB1AA008DD000C4B54 /* Main.storyboard */,
@@ -371,11 +377,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729781B41AA81F0800648132 /* Dillo.swift in Sources */,
 				5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */,
 				5CEA9CA81AA008DD000C4B54 /* GameScene.swift in Sources */,
 				5CEA9CAA1AA008DD000C4B54 /* GameViewController.swift in Sources */,
 				729781991AA3013800648132 /* FMMParallaxNode.m in Sources */,
 				5CEA9CA41AA008DD000C4B54 /* AppDelegate.swift in Sources */,
+				729781B61AA81F1800648132 /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
