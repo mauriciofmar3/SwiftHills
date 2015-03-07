@@ -9,9 +9,14 @@
 import UIKit
 import SpriteKit
 
-class Dillo {
-    var node : SKSpriteNode
-    init(imageNamed: String, frame: CGRect) {
-        node = SKSpriteNode(imageNamed: imageNamed)
+class Dillo : SKSpriteNode {
+    init(imageNamed: String, origin: CGPoint) {
+        let texture = SKTexture(imageNamed: imageNamed)
+        super.init(texture: texture, color: nil, size: texture.size())
+        self.position = origin
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

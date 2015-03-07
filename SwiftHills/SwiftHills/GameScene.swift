@@ -22,8 +22,8 @@ class GameScene: SKScene {
     }
     
     func setupDillo() {
-        ship = SKSpriteNode(imageNamed: "SpaceFlier_sm_1.png")
-        ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
+        let position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
+        ship = Dillo(imageNamed: "SpaceFlier_sm_1.png", origin: position)
         self.addChild(ship)
     }
     
