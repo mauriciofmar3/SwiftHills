@@ -9,7 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    var dillo : SKSpriteNode!
+    var dillo : Dillo!
     var parallaxSpaceDust : ParallaxNode!
     var parallaxNodeBackgrounds : ParallaxNode!
     
@@ -49,11 +49,19 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
+        dillo.increasedDescent = true
+    }
+    
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        dillo.increasedDescent = false
     }
    
     override func update(currentTime: CFTimeInterval) {
         parallaxNodeBackgrounds.update(currentTime)
         parallaxSpaceDust.update(currentTime)
+    }
+    
+    override func didEvaluateActions() {
+        dillo.updateVelocity()
     }
 }
