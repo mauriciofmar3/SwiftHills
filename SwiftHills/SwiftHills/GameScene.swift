@@ -9,7 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    var ship : SKSpriteNode!
+    var dillo : SKSpriteNode!
     var parallaxSpaceDust : ParallaxNode!
     var parallaxNodeBackgrounds : ParallaxNode!
     
@@ -23,8 +23,8 @@ class GameScene: SKScene {
     
     func setupDillo() {
         let position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
-        ship = Dillo(imageNamed: "SpaceFlier_sm_1.png", origin: position)
-        self.addChild(ship)
+        dillo = Dillo(imageNamed: "SpaceFlier_sm_1.png", origin: position)
+        self.addChild(dillo)
     }
     
     func setupBackground() {
