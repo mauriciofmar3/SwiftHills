@@ -16,6 +16,7 @@
 		5CEA9CB21AA008DD000C4B54 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CEA9CB01AA008DD000C4B54 /* LaunchScreen.xib */; };
 		5CEA9CBE1AA008DD000C4B54 /* SwiftHillsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA9CBD1AA008DD000C4B54 /* SwiftHillsTests.swift */; };
 		5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */; };
+		7248D2831AABDC5B004656F3 /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248D2821AABDC5B004656F3 /* Wall.swift */; };
 		729781941AA3013800648132 /* bg_front_spacedust.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781761AA3013800648132 /* bg_front_spacedust.png */; };
 		729781951AA3013800648132 /* bg_galaxy.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781771AA3013800648132 /* bg_galaxy.png */; };
 		729781961AA3013800648132 /* bg_planetsunrise.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781781AA3013800648132 /* bg_planetsunrise.png */; };
@@ -69,6 +70,7 @@
 		5CEA9CBC1AA008DD000C4B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CEA9CBD1AA008DD000C4B54 /* SwiftHillsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHillsTests.swift; sourceTree = "<group>"; };
 		5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxNode.swift; sourceTree = "<group>"; };
+		7248D2821AABDC5B004656F3 /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
 		729781761AA3013800648132 /* bg_front_spacedust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_front_spacedust.png; sourceTree = "<group>"; };
 		729781771AA3013800648132 /* bg_galaxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_galaxy.png; sourceTree = "<group>"; };
 		729781781AA3013800648132 /* bg_planetsunrise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_planetsunrise.png; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				5CEA9CA51AA008DD000C4B54 /* GameScene.sks */,
 				5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */,
 				729781B31AA81F0800648132 /* Dillo.swift */,
+				7248D2821AABDC5B004656F3 /* Wall.swift */,
 				729781B51AA81F1800648132 /* Coin.swift */,
 				5CEA9CA71AA008DD000C4B54 /* GameScene.swift */,
 				5CEA9CA91AA008DD000C4B54 /* GameViewController.swift */,
@@ -382,6 +385,7 @@
 				5CEA9CA81AA008DD000C4B54 /* GameScene.swift in Sources */,
 				5CEA9CAA1AA008DD000C4B54 /* GameViewController.swift in Sources */,
 				729781991AA3013800648132 /* FMMParallaxNode.m in Sources */,
+				7248D2831AABDC5B004656F3 /* Wall.swift in Sources */,
 				5CEA9CA41AA008DD000C4B54 /* AppDelegate.swift in Sources */,
 				729781B61AA81F1800648132 /* Coin.swift in Sources */,
 			);

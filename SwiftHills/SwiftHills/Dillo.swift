@@ -35,6 +35,6 @@ class Dillo : SKSpriteNode {
         dy = max(dy, -maxSpeed)
         dy = min(dy, maxSpeed)
         
-        self.physicsBody?.velocity = CGVectorMake(dx, dy);
+        self.physicsBody?.velocity = CGVectorMake(dx, dy)
     }
 }
