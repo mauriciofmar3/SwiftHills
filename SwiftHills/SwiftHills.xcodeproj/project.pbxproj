@@ -22,7 +22,6 @@
 		729781961AA3013800648132 /* bg_planetsunrise.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781781AA3013800648132 /* bg_planetsunrise.png */; };
 		729781971AA3013800648132 /* bg_spacialanomaly.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781791AA3013800648132 /* bg_spacialanomaly.png */; };
 		729781981AA3013800648132 /* bg_spacialanomaly2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7297817A1AA3013800648132 /* bg_spacialanomaly2.png */; };
-		729781991AA3013800648132 /* FMMParallaxNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7297817D1AA3013800648132 /* FMMParallaxNode.m */; };
 		7297819A1AA3013800648132 /* icon-large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7297817F1AA3013800648132 /* icon-large@2x.png */; };
 		7297819B1AA3013800648132 /* icon-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781801AA3013800648132 /* icon-medium.png */; };
 		7297819C1AA3013800648132 /* icon-medium@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781811AA3013800648132 /* icon-medium@2x.png */; };
@@ -76,8 +75,6 @@
 		729781781AA3013800648132 /* bg_planetsunrise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_planetsunrise.png; sourceTree = "<group>"; };
 		729781791AA3013800648132 /* bg_spacialanomaly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_spacialanomaly.png; sourceTree = "<group>"; };
 		7297817A1AA3013800648132 /* bg_spacialanomaly2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_spacialanomaly2.png; sourceTree = "<group>"; };
-		7297817C1AA3013800648132 /* FMMParallaxNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMParallaxNode.h; sourceTree = "<group>"; };
-		7297817D1AA3013800648132 /* FMMParallaxNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMParallaxNode.m; sourceTree = "<group>"; };
 		7297817F1AA3013800648132 /* icon-large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-large@2x.png"; sourceTree = "<group>"; };
 		729781801AA3013800648132 /* icon-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-medium.png"; sourceTree = "<group>"; };
 		729781811AA3013800648132 /* icon-medium@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-medium@2x.png"; sourceTree = "<group>"; };
@@ -186,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				729781751AA3013800648132 /* Backgrounds */,
-				7297817B1AA3013800648132 /* Classes */,
 				7297817E1AA3013800648132 /* Icons */,
 				729781841AA3013800648132 /* Particles */,
 				7297818B1AA3013800648132 /* Sounds */,
@@ -205,15 +201,6 @@
 				7297817A1AA3013800648132 /* bg_spacialanomaly2.png */,
 			);
 			path = Backgrounds;
-			sourceTree = "<group>";
-		};
-		7297817B1AA3013800648132 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7297817C1AA3013800648132 /* FMMParallaxNode.h */,
-				7297817D1AA3013800648132 /* FMMParallaxNode.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		7297817E1AA3013800648132 /* Icons */ = {
@@ -384,7 +371,6 @@
 				5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */,
 				5CEA9CA81AA008DD000C4B54 /* GameScene.swift in Sources */,
 				5CEA9CAA1AA008DD000C4B54 /* GameViewController.swift in Sources */,
-				729781991AA3013800648132 /* FMMParallaxNode.m in Sources */,
 				7248D2831AABDC5B004656F3 /* Wall.swift in Sources */,
 				5CEA9CA41AA008DD000C4B54 /* AppDelegate.swift in Sources */,
 				729781B61AA81F1800648132 /* Coin.swift in Sources */,
