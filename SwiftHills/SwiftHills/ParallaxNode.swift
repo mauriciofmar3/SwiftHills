@@ -29,7 +29,7 @@ class ParallaxNode : SKNode {
     }
     
     convenience init(file: NSString, size: CGSize, pointsPerSecondSpeed: Float) {
-        self.init(files: [file, file, file], size: size, pointsPerSecondSpeed: pointsPerSecondSpeed);
+        self.init(files: [file, file, file], size: size, pointsPerSecondSpeed: pointsPerSecondSpeed)
     }
     
     init(files: NSArray, size: CGSize, pointsPerSecondSpeed: Float) {
@@ -50,7 +50,7 @@ class ParallaxNode : SKNode {
     }
     
     func randomValueBetween(low: CGFloat, high: CGFloat) -> CGFloat {
-        return ((CGFloat(arc4random()) / 0xFFFFFFFF) * (high - low)) + low;
+        return ((CGFloat(arc4random()) / 0xFFFFFFFF) * (high - low)) + low
     }
     
     func randomizeNodesPositions() {
@@ -75,16 +75,16 @@ class ParallaxNode : SKNode {
         lastUpdateTime = currentTime
         
         let bgVelocity = CGPointMake(CGFloat(-pointsPerSecondSpeed), 0.0)
-        let amtToMove = CGPointMake(bgVelocity.x * CGFloat(deltaTime), bgVelocity.y * CGFloat(deltaTime));
+        let amtToMove = CGPointMake(bgVelocity.x * CGFloat(deltaTime), bgVelocity.y * CGFloat(deltaTime))
         self.position = CGPointMake(self.position.x + amtToMove.x, self.position.y + amtToMove.y)
         let backgroundScreen = self.parent
         
         backgrounds.enumerateObjectsUsingBlock { (obj: AnyObject!, idx: Int, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
             
-            let bg = obj as SKSpriteNode;
+            let bg = obj as SKSpriteNode
             let bgScreenPos = self.convertPoint(bg.position, toNode: backgroundScreen!)
             if (bgScreenPos.x <= -bg.size.width) {
-                bg.position = CGPointMake(bg.position.x + (bg.size.width * CGFloat(self.numberOfImagesForBackground)), bg.position.y);
+                bg.position = CGPointMake(bg.position.x + (bg.size.width * CGFloat(self.numberOfImagesForBackground)), bg.position.y)
                 if (self.randomizeDuringRollover) {
                     self.randomizeNodePosition(bg)
                 }

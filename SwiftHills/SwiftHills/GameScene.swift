@@ -21,12 +21,6 @@ class GameScene: SKScene {
         self.setupWall()
     }
     
-    func setupDillo() {
-        let position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
-        dillo = Dillo(imageNamed: "SpaceFlier_sm_1.png", origin: position)
-        self.addChild(dillo)
-    }
-    
     func setupBackground() {
         let parallaxBackgroundNames = ["bg_galaxy.png", "bg_planetsunrise.png",
             "bg_spacialanomaly.png", "bg_spacialanomaly2.png"]
@@ -37,14 +31,27 @@ class GameScene: SKScene {
         self.addChild(parallaxNodeBackgrounds)
         let parallaxBackground2Names = ["bg_front_spacedust.png", "bg_front_spacedust.png"]
         parallaxSpaceDust = ParallaxNode(files: parallaxBackground2Names, size: size, pointsPerSecondSpeed: 25.0)
-        parallaxSpaceDust.position = CGPointMake(0, 0);
+        parallaxSpaceDust.position = CGPointMake(0, 0)
         self.addChild(parallaxSpaceDust)
     }
     
+    func setupDillo() {
+        let position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame))
+        dillo = Dillo(imageNamed: "SpaceFlier_sm_1.png", origin: position)
+        self.addChild(dillo)
+    }
+    
     func setupWall() {
-        let node = SKNode()
-        node.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRectMake(0.0, self.frame.size.height - 1.0,
-                                                                      self.frame.size.width, 1.0))
+        let frame = CGRectMake(0.0, self.frame.size.height/5 - 4.0,
+            self.frame.size.width, 4.0)
+        let node = SKSpriteNode(color: UIColor.yellowColor(), size: frame.size)
+        node.position = frame.origin
+        let path = CGPathCreateWithRect(CGRectMake(0, 0, frame.size.width, frame.size.height), nil)
+        node.physicsBody = SKPhysicsBody(polygonFromPath: path)
+        node.physicsBody!.velocity = CGVectorMake(0.0, 0.0)
+        node.physicsBody!.affectedByGravity = false
+        node.physicsBody!.linearDamping = 0.0
+        node.physicsBody!.dynamic = false
         self.addChild(node)
     }
     
