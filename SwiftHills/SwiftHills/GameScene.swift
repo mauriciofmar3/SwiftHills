@@ -9,6 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var wall : Wall!
     var dillo : Dillo!
     var parallaxSpaceDust : ParallaxNode!
     var parallaxNodeBackgrounds : ParallaxNode!
@@ -42,17 +43,8 @@ class GameScene: SKScene {
     }
     
     func setupWall() {
-        let frame = CGRectMake(0.0, self.frame.size.height/5 - 4.0,
-            self.frame.size.width, 4.0)
-        let node = SKSpriteNode(color: UIColor.yellowColor(), size: frame.size)
-        node.position = frame.origin
-        let path = CGPathCreateWithRect(CGRectMake(0, 0, frame.size.width, frame.size.height), nil)
-        node.physicsBody = SKPhysicsBody(polygonFromPath: path)
-        node.physicsBody!.velocity = CGVectorMake(0.0, 0.0)
-        node.physicsBody!.affectedByGravity = false
-        node.physicsBody!.linearDamping = 0.0
-        node.physicsBody!.dynamic = false
-        self.addChild(node)
+        wall = Wall(parentFrame: self.frame)
+        self.addChild(wall)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
