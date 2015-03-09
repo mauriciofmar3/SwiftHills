@@ -11,9 +11,9 @@ import SpriteKit
 
 class Hill: SKSpriteNode {
     init(parentFrame: CGRect) {
-        let frame = CGRectMake(parentFrame.origin.x + 50, 200,
+        let frame = CGRectMake(parentFrame.origin.x + 50, 260,
             parentFrame.size.width, 4.0)
-        let texture = SKTexture(imageNamed: "hill.png")
+        let texture = SKTexture(imageNamed: "hill2.png")
         super.init(texture: texture, color: nil, size: texture.size())
         self.position = frame.origin
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())

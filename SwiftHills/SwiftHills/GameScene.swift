@@ -45,7 +45,7 @@ class GameScene: SKScene {
     func setupWall() {
         wall = Hill(parentFrame: self.frame)
         self.addChild(wall)
-        let wall2 = Hill(parentFrame: CGRectMake(self.frame.origin.x + 700, self.frame.origin.y, self.frame.size.width, self.frame.size.height))
+        let wall2 = Hill(parentFrame: CGRectMake(self.frame.origin.x + 500, self.frame.origin.y, self.frame.size.width, self.frame.size.height))
         self.addChild(wall2)
     }
     
