@@ -11,12 +11,12 @@ import SpriteKit
 
 class Wall: SKSpriteNode {
     init(parentFrame: CGRect) {
-        let frame = CGRectMake(0.0, 100 - 4.0,
+        let frame = CGRectMake(50, 200,
             parentFrame.size.width, 4.0)
-        super.init(texture: nil, color: UIColor.yellowColor(), size: frame.size)
+        let texture = SKTexture(imageNamed: "hill.png")
+        super.init(texture: texture, color: nil, size: texture.size())
         self.position = frame.origin
-        let path = CGPathCreateWithRect(CGRectMake(0, 0, frame.size.width, frame.size.height), nil)
-        self.physicsBody = SKPhysicsBody(polygonFromPath: path)
+        self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
         self.physicsBody!.velocity = CGVectorMake(0.0, 0.0)
         self.physicsBody!.affectedByGravity = false
         self.physicsBody!.linearDamping = 0.0

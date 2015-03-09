@@ -15,7 +15,7 @@ class GameScene: SKScene {
     var parallaxNodeBackgrounds : ParallaxNode!
     
     override func didMoveToView(view: SKView) {
-        self.backgroundColor = SKColor.blackColor()
+        self.backgroundColor = SKColor.whiteColor()
 
         self.setupBackground()
         self.setupDillo()
