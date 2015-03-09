@@ -45,6 +45,8 @@ class GameScene: SKScene {
     func setupWall() {
         wall = Wall(parentFrame: self.frame)
         self.addChild(wall)
+        let wall2 = Wall(parentFrame: CGRectMake(self.frame.origin.x + 700, self.frame.origin.y, self.frame.size.width, self.frame.size.height))
+        self.addChild(wall2)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

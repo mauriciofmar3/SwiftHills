@@ -11,7 +11,7 @@ import SpriteKit
 
 class Wall: SKSpriteNode {
     init(parentFrame: CGRect) {
-        let frame = CGRectMake(50, 200,
+        let frame = CGRectMake(parentFrame.origin.x + 50, 200,
             parentFrame.size.width, 4.0)
         let texture = SKTexture(imageNamed: "hill.png")
         super.init(texture: texture, color: nil, size: texture.size())
