@@ -9,7 +9,7 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    var wall : Wall!
+    var wall : Hill!
     var dillo : Dillo!
     var parallaxSpaceDust : ParallaxNode!
     var parallaxNodeBackgrounds : ParallaxNode!
@@ -43,9 +43,9 @@ class GameScene: SKScene {
     }
     
     func setupWall() {
-        wall = Wall(parentFrame: self.frame)
+        wall = Hill(parentFrame: self.frame)
         self.addChild(wall)
-        let wall2 = Wall(parentFrame: CGRectMake(self.frame.origin.x + 700, self.frame.origin.y, self.frame.size.width, self.frame.size.height))
+        let wall2 = Hill(parentFrame: CGRectMake(self.frame.origin.x + 700, self.frame.origin.y, self.frame.size.width, self.frame.size.height))
         self.addChild(wall2)
     }
     

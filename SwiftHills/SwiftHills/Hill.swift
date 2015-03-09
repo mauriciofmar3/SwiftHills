@@ -1,5 +1,5 @@
 //
-//  Wall.swift
+//  Hill.swift
 //  SwiftHills
 //
 //  Created by Mauricio Bell'Albero on 3/7/15.
@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class Wall: SKSpriteNode {
+class Hill: SKSpriteNode {
     init(parentFrame: CGRect) {
         let frame = CGRectMake(parentFrame.origin.x + 50, 200,
             parentFrame.size.width, 4.0)
