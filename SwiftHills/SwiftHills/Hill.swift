@@ -11,7 +11,7 @@ import SpriteKit
 
 class Hill: GameNode {
     init(parentFrame: CGRect) {
-        let frame = CGRectMake(parentFrame.origin.x + 50, 230,
+        let frame = CGRectMake(parentFrame.origin.x + 50, 235,
             parentFrame.size.width, 4.0)
         let texture = SKTexture(imageNamed: "hill2.png")
         super.init(imageNamed: "hill2.png")
