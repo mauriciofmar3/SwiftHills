@@ -9,18 +9,19 @@
 import UIKit
 import SpriteKit
 
-class Hill: SKSpriteNode {
+class Hill: GameNode {
     init(parentFrame: CGRect) {
-        let frame = CGRectMake(parentFrame.origin.x + 50, 260,
+        let frame = CGRectMake(parentFrame.origin.x + 50, 230,
             parentFrame.size.width, 4.0)
         let texture = SKTexture(imageNamed: "hill2.png")
-        super.init(texture: texture, color: nil, size: texture.size())
+        super.init(imageNamed: "hill2.png")
         self.position = frame.origin
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
         self.physicsBody!.velocity = CGVectorMake(0.0, 0.0)
         self.physicsBody!.affectedByGravity = false
         self.physicsBody!.linearDamping = 0.0
         self.physicsBody!.dynamic = false
+        self.physicsBody!.friction = 0.0
     }
 
     required init?(coder aDecoder: NSCoder) {

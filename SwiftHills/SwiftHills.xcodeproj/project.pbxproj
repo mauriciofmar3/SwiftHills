@@ -17,6 +17,8 @@
 		5CEA9CBE1AA008DD000C4B54 /* SwiftHillsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA9CBD1AA008DD000C4B54 /* SwiftHillsTests.swift */; };
 		5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */; };
 		720DB4611AAE48E600F0B832 /* hill2.png in Resources */ = {isa = PBXBuildFile; fileRef = 720DB4601AAE48E600F0B832 /* hill2.png */; };
+		720DB4631AAEA13300F0B832 /* GameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720DB4621AAEA13300F0B832 /* GameNode.swift */; };
+		720DB4651AAECA5200F0B832 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720DB4641AAECA5200F0B832 /* World.swift */; };
 		7248D2831AABDC5B004656F3 /* Hill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248D2821AABDC5B004656F3 /* Hill.swift */; };
 		7248D2851AAD9E51004656F3 /* hill.png in Resources */ = {isa = PBXBuildFile; fileRef = 7248D2841AAD9E51004656F3 /* hill.png */; };
 		729781941AA3013800648132 /* bg_front_spacedust.png in Resources */ = {isa = PBXBuildFile; fileRef = 729781761AA3013800648132 /* bg_front_spacedust.png */; };
@@ -72,6 +74,8 @@
 		5CEA9CBD1AA008DD000C4B54 /* SwiftHillsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHillsTests.swift; sourceTree = "<group>"; };
 		5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxNode.swift; sourceTree = "<group>"; };
 		720DB4601AAE48E600F0B832 /* hill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hill2.png; path = Icons/hill2.png; sourceTree = "<group>"; };
+		720DB4621AAEA13300F0B832 /* GameNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameNode.swift; sourceTree = "<group>"; };
+		720DB4641AAECA5200F0B832 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		7248D2821AABDC5B004656F3 /* Hill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hill.swift; sourceTree = "<group>"; };
 		7248D2841AAD9E51004656F3 /* hill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hill.png; sourceTree = "<group>"; };
 		729781761AA3013800648132 /* bg_front_spacedust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_front_spacedust.png; sourceTree = "<group>"; };
@@ -143,9 +147,11 @@
 			children = (
 				5CEA9CA31AA008DD000C4B54 /* AppDelegate.swift */,
 				5CEA9CA51AA008DD000C4B54 /* GameScene.sks */,
+				720DB4621AAEA13300F0B832 /* GameNode.swift */,
 				5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */,
 				729781B31AA81F0800648132 /* Dillo.swift */,
 				7248D2821AABDC5B004656F3 /* Hill.swift */,
+				720DB4641AAECA5200F0B832 /* World.swift */,
 				729781B51AA81F1800648132 /* Coin.swift */,
 				5CEA9CA71AA008DD000C4B54 /* GameScene.swift */,
 				5CEA9CA91AA008DD000C4B54 /* GameViewController.swift */,
@@ -381,6 +387,8 @@
 				5CEA9CAA1AA008DD000C4B54 /* GameViewController.swift in Sources */,
 				7248D2831AABDC5B004656F3 /* Hill.swift in Sources */,
 				5CEA9CA41AA008DD000C4B54 /* AppDelegate.swift in Sources */,
+				720DB4651AAECA5200F0B832 /* World.swift in Sources */,
+				720DB4631AAEA13300F0B832 /* GameNode.swift in Sources */,
 				729781B61AA81F1800648132 /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
