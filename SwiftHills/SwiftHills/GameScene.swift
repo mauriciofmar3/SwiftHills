@@ -17,6 +17,7 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         self.backgroundColor = SKColor.whiteColor()
+        self.physicsWorld.gravity = CGVectorMake(0.0, -0.4)
 
         self.setupBackground()
         self.setupDillo()

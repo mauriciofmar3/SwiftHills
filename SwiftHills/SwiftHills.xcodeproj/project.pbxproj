@@ -47,6 +47,7 @@
 		729781AC1AA3013800648132 /* SpaceShooter.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 729781931AA3013800648132 /* SpaceShooter.atlas */; };
 		729781B41AA81F0800648132 /* Dillo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729781B31AA81F0800648132 /* Dillo.swift */; };
 		729781B61AA81F1800648132 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729781B51AA81F1800648132 /* Coin.swift */; };
+		72DE2FE81AB0339200927E9F /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DE2FE71AB0339200927E9F /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		729781931AA3013800648132 /* SpaceShooter.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SpaceShooter.atlas; sourceTree = "<group>"; };
 		729781B31AA81F0800648132 /* Dillo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dillo.swift; sourceTree = "<group>"; };
 		729781B51AA81F1800648132 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		72DE2FE71AB0339200927E9F /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				5CEA9CC71AA009D4000C4B54 /* ParallaxNode.swift */,
 				729781B31AA81F0800648132 /* Dillo.swift */,
 				7248D2821AABDC5B004656F3 /* Hill.swift */,
+				72DE2FE71AB0339200927E9F /* UIImage+Resize.swift */,
 				720DB4641AAECA5200F0B832 /* World.swift */,
 				729781B51AA81F1800648132 /* Coin.swift */,
 				5CEA9CA71AA008DD000C4B54 /* GameScene.swift */,
@@ -384,6 +387,7 @@
 				729781B41AA81F0800648132 /* Dillo.swift in Sources */,
 				5CEA9CC81AA009D4000C4B54 /* ParallaxNode.swift in Sources */,
 				5CEA9CA81AA008DD000C4B54 /* GameScene.swift in Sources */,
+				72DE2FE81AB0339200927E9F /* UIImage+Resize.swift in Sources */,
 				5CEA9CAA1AA008DD000C4B54 /* GameViewController.swift in Sources */,
 				7248D2831AABDC5B004656F3 /* Hill.swift in Sources */,
 				5CEA9CA41AA008DD000C4B54 /* AppDelegate.swift in Sources */,

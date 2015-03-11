@@ -49,7 +49,7 @@ class World: NSObject {
     
     func appendHill() {
         let lastHill = (hills.lastObject as Hill)
-        let hill = Hill(parentFrame: CGRectMake(lastHill.position.x + 445, lastHill.position.y, lastHill.size.width, lastHill.size.height))
+        let hill = Hill(parentFrame: CGRectMake(lastHill.position.x + 500, lastHill.position.y, lastHill.size.width, lastHill.size.height))
         hills.addObject(hill)
         scene.addChild(hill)
     }

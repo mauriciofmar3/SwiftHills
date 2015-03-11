@@ -10,8 +10,7 @@ import UIKit
 import SpriteKit
 
 class GameNode: SKSpriteNode {
-    init(imageNamed: String) {
-        let texture = SKTexture(imageNamed: imageNamed)
+    init(texture: SKTexture) {
         super.init(texture: texture, color: nil, size: texture.size());
     }
     

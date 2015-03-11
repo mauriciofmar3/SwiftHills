@@ -9,12 +9,14 @@
 import UIKit
 import SpriteKit
 
+let dilloImage = UIImage.imageWithImage(UIImage(named: "Hill2.png")!, newSize: CGSizeMake(550.0, 277.0))
+
 class Hill: GameNode {
     init(parentFrame: CGRect) {
         let frame = CGRectMake(parentFrame.origin.x + 50, 235,
             parentFrame.size.width, 4.0)
-        let texture = SKTexture(imageNamed: "hill2.png")
-        super.init(imageNamed: "hill2.png")
+        let texture = SKTexture(image: dilloImage)
+        super.init(texture: texture)
         self.position = frame.origin
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
         self.physicsBody!.velocity = CGVectorMake(0.0, 0.0)
