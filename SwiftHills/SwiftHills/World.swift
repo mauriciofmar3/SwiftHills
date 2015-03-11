@@ -13,14 +13,23 @@ class World: NSObject {
     let scene : SKScene
     let dillo : Dillo
     let hills : NSMutableArray
+    let coins : NSMutableArray
     let dilloPosition : CGFloat
     init(gameScene: SKScene, dillo: Dillo) {
         scene = gameScene
         hills = NSMutableArray()
+        coins = NSMutableArray()
         self.dillo = dillo
         self.dilloPosition = dillo.position.x
         super.init()
         self.setupHills()
+        self.setupCoins()
+    }
+    
+    func setupCoins() {
+        let coin = Coin(origin: CGPointMake(600.0, 600.0))
+        coins.addObject(coin)
+        scene.addChild(coin)
     }
     
     func setupHills() {

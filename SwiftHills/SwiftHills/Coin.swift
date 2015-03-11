@@ -9,6 +9,15 @@
 import UIKit
 import SpriteKit
 
-class Coin: SKNode {
-   
+let coinImage = UIImage(named: "star3.png")!
+
+class Coin: GameNode {
+    init(origin: CGPoint) {
+        super.init(texture: SKTexture(image: coinImage))
+        self.position = origin
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
