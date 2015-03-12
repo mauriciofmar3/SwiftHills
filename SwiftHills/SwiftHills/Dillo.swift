@@ -22,7 +22,8 @@ class Dillo : SKSpriteNode {
         self.physicsBody!.linearDamping = 0.0
         self.physicsBody!.restitution = 0.0
         self.physicsBody!.categoryBitMask = UInt32(coinCollision)
-        self.physicsBody!.collisionBitMask = UInt32(coinCollision)
+        self.physicsBody!.collisionBitMask = 2
+        self.physicsBody!.contactTestBitMask = UInt32(coinCollision)
 
     }
 

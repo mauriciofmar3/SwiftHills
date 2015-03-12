@@ -14,27 +14,17 @@ class World: NSObject {
     let dillo : Dillo
     var hills : [Hill]
     let coins : NSMutableArray
-    let coinPool : NSMutableArray
     let dilloPosition : CGFloat
+    var coinCollisioned : Coin?
     init(gameScene: SKScene, dillo: Dillo) {
         scene = gameScene
         coins = NSMutableArray()
-        coinPool = NSMutableArray()
         let frame = CGRectMake(-2000, scene.frame.origin.y, scene.frame.size.width, scene.frame.size.height)
         hills = [Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame)]
         self.dillo = dillo
         dilloPosition = dillo.position.x
         super.init()
-        self.setupCoins()
         self.setupHills()
-    }
-    
-    func setupCoins() {
-        for _ in 0...40 {
-            let coin = Coin(origin: CGPointMake(-2000.0, 600.0))
-            coinPool.addObject(coin)
-            scene.addChild(coin)
-        }
     }
     
     func setupHills() {
@@ -60,8 +50,9 @@ class World: NSObject {
     
     func updateCoins() {
         while coins.count < 10 {
-            coins.addObject(coinPool.firstObject!)
-            coinPool.removeObjectAtIndex(0)
+            let coin = Coin(origin: CGPointMake(-2000.0, 600.0))
+            coins.addObject(coin)
+            scene.addChild(coin)
             (coins.lastObject as Coin).position.x = CGFloat(arc4random_uniform(1000)) + 1000
             (coins.lastObject as Coin).position.y = CGFloat(arc4random_uniform(200)) + 400
         }
@@ -70,9 +61,12 @@ class World: NSObject {
             let coin = obj as Coin
             coin.position.x = coin.position.x - dilloPositionDifference
             if coin.position.x < -1000 {
-                coins.removeObject(coin)
-                coinPool.addObject(coin)
+                resetCoin(coin)
             }
+        }
+        if coinCollisioned != nil {
+            resetCoin(coinCollisioned!)
+            coinCollisioned = nil
         }
     }
     
@@ -91,5 +85,14 @@ class World: NSObject {
             maxHill = maxHill.position.x < (hill as Hill).position.x ? hill : maxHill
         }
         return (minHill, maxHill)
+    }
+    
+    func hitCoin(coin: Coin) {
+        coinCollisioned = coin
+    }
+    
+    func resetCoin(coin: Coin) {
+        coin.position.x = CGFloat(arc4random_uniform(1000)) + 1000
+        coin.position.y = CGFloat(arc4random_uniform(200)) + 400
     }
 }

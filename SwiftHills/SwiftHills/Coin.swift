@@ -1,3 +1,4 @@
+
 //
 //  Coin.swift
 //  SwiftHills
@@ -16,9 +17,12 @@ class Coin: GameNode {
     init(origin: CGPoint) {
         super.init(texture: SKTexture(image: coinImage))
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture!.size())
+        self.physicsBody!.dynamic = false
         self.physicsBody!.categoryBitMask = UInt32(coinCollision)
-        self.physicsBody!.collisionBitMask = UInt32(coinCollision)
+        self.physicsBody!.collisionBitMask = 0
+        self.physicsBody!.contactTestBitMask = UInt32(coinCollision)
         self.position = origin
+        self.name = "Coin"
     }
 
     required init?(coder aDecoder: NSCoder) {

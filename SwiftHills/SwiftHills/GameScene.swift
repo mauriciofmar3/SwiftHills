@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var wall : Hill!
     var world : World!
     var dillo : Dillo!
@@ -20,6 +20,7 @@ class GameScene: SKScene {
         self.physicsWorld.gravity = CGVectorMake(0.0, -0.4)
 
 //        self.setupBackground()
+        self.physicsWorld.contactDelegate = self
         self.setupDillo()
         self.setupWall()
     }
@@ -67,6 +68,12 @@ class GameScene: SKScene {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
+        if contact.bodyA.node!.name == "Coin" {
+            world.hitCoin(contact.bodyA.node! as Coin)
+        }
+        if contact.bodyB.node!.name == "Coin" {
+            world.hitCoin(contact.bodyB.node! as Coin)
+        }
         println(contact)
     }
 }
