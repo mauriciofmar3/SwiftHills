@@ -10,19 +10,21 @@ import UIKit
 import SpriteKit
 
 class World: NSObject {
-    let scene : SKScene
+    let scene : GameScene
     let dillo : Dillo
     var hills : [Hill]
     let coins : NSMutableArray
     let dilloPosition : CGFloat
     var coinCollisioned : Coin?
-    init(gameScene: SKScene, dillo: Dillo) {
+    var coinsCollected : Int
+    init(gameScene: GameScene, dillo: Dillo) {
         scene = gameScene
         coins = NSMutableArray()
         let frame = CGRectMake(-2000, scene.frame.origin.y, scene.frame.size.width, scene.frame.size.height)
         hills = [Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame)]
         self.dillo = dillo
         dilloPosition = dillo.position.x
+        coinsCollected = 0
         super.init()
         self.setupHills()
     }
@@ -67,6 +69,8 @@ class World: NSObject {
         if coinCollisioned != nil {
             resetCoin(coinCollisioned!)
             coinCollisioned = nil
+            coinsCollected++
+            scene.scoreLabel!.text = "Score: \(coinsCollected)"
         }
     }
     

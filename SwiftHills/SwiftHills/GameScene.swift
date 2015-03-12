@@ -14,6 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var dillo : Dillo!
     var parallaxSpaceDust : ParallaxNode!
     var parallaxNodeBackgrounds : ParallaxNode!
+    var scoreLabel : SKLabelNode?
     
     override func didMoveToView(view: SKView) {
         self.backgroundColor = SKColor.whiteColor()
@@ -21,8 +22,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 //        self.setupBackground()
         self.physicsWorld.contactDelegate = self
+        self.setupScore()
         self.setupDillo()
         self.setupWall()
+    }
+    
+    func setupScore() {
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel!.text = "Score: 0"
+        scoreLabel!.fontSize = 20
+        scoreLabel!.fontColor = SKColor.blackColor()
+        scoreLabel!.position = CGPoint(x: 50, y: 640)
+        addChild(scoreLabel!)
     }
     
     func setupBackground() {
