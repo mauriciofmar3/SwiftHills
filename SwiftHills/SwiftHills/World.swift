@@ -33,7 +33,6 @@ class World: NSObject {
     }
     
     func setupHills() {
-        hills.addObject(Hill(parentFrame: scene.frame))
         let hill = Hill(parentFrame: CGRectMake(scene.frame.origin.x, scene.frame.origin.y, scene.frame.size.width, scene.frame.size.height))
         hills.addObject(hill)
         scene.addChild(hill)
@@ -51,7 +50,6 @@ class World: NSObject {
         }
         dillo.position = CGPointMake(dilloPosition,  dillo.position.y)
         if ((hills[0] as Hill).position.x < -1000.0) {
-//            appendHill()
             popHill()
         }
     }
@@ -66,7 +64,7 @@ class World: NSObject {
     func popHill() {
         let hill = hills.firstObject as Hill
         hills.removeObject(hill)
-        hills.addObject(hill)
         hill.position = CGPointMake((hills.lastObject as Hill).position.x + 550, 235)
+        hills.addObject(hill)
     }
 }
