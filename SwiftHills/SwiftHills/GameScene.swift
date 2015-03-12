@@ -65,4 +65,8 @@ class GameScene: SKScene {
         world.update()
         dillo.updateVelocity()
     }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        println(contact)
+    }
 }

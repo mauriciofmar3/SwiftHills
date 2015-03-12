@@ -21,6 +21,9 @@ class Dillo : SKSpriteNode {
         self.physicsBody!.affectedByGravity = true
         self.physicsBody!.linearDamping = 0.0
         self.physicsBody!.restitution = 0.0
+        self.physicsBody!.categoryBitMask = UInt32(coinCollision)
+        self.physicsBody!.collisionBitMask = UInt32(coinCollision)
+
     }
 
     required init?(coder aDecoder: NSCoder) {
