@@ -19,7 +19,7 @@ class GameScene: SKScene {
         self.backgroundColor = SKColor.whiteColor()
         self.physicsWorld.gravity = CGVectorMake(0.0, -0.4)
 
-        self.setupBackground()
+//        self.setupBackground()
         self.setupDillo()
         self.setupWall()
     }
@@ -57,8 +57,8 @@ class GameScene: SKScene {
     }
    
     override func update(currentTime: CFTimeInterval) {
-        parallaxNodeBackgrounds.update(currentTime)
-        parallaxSpaceDust.update(currentTime)
+//        parallaxNodeBackgrounds.update(currentTime)
+//        parallaxSpaceDust.update(currentTime)
     }
     
     override func didEvaluateActions() {

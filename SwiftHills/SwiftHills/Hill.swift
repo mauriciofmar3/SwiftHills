@@ -24,6 +24,7 @@ class Hill: GameNode {
         self.physicsBody!.linearDamping = 0.0
         self.physicsBody!.dynamic = false
         self.physicsBody!.friction = 0.0
+        self.physicsBody!.restitution = 0.0
     }
 
     required init?(coder aDecoder: NSCoder) {

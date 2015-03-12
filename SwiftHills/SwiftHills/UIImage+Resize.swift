@@ -10,10 +10,10 @@ import UIKit
 
 extension UIImage {
     class func imageWithImage(image: UIImage, newSize: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
         image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return newImage;
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
 }

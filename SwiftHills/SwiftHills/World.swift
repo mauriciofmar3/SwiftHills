@@ -12,34 +12,35 @@ import SpriteKit
 class World: NSObject {
     let scene : SKScene
     let dillo : Dillo
-    let hills : NSMutableArray
+    var hills : [Hill]
     let coins : NSMutableArray
+    let coinPool : NSMutableArray
     let dilloPosition : CGFloat
     init(gameScene: SKScene, dillo: Dillo) {
         scene = gameScene
-        hills = NSMutableArray()
         coins = NSMutableArray()
+        coinPool = NSMutableArray()
+        let frame = CGRectMake(-2000, scene.frame.origin.y, scene.frame.size.width, scene.frame.size.height)
+        hills = [Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame), Hill(parentFrame: frame)]
         self.dillo = dillo
-        self.dilloPosition = dillo.position.x
+        dilloPosition = dillo.position.x
         super.init()
-        self.setupHills()
         self.setupCoins()
+        self.setupHills()
     }
     
     func setupCoins() {
-        let coin = Coin(origin: CGPointMake(600.0, 600.0))
-        coins.addObject(coin)
-        scene.addChild(coin)
+        for _ in 0...40 {
+            let coin = Coin(origin: CGPointMake(-2000.0, 600.0))
+            coinPool.addObject(coin)
+            scene.addChild(coin)
+        }
     }
     
     func setupHills() {
-        let hill = Hill(parentFrame: CGRectMake(scene.frame.origin.x, scene.frame.origin.y, scene.frame.size.width, scene.frame.size.height))
-        hills.addObject(hill)
-        scene.addChild(hill)
-        self.appendHill()
-        self.appendHill()
-        self.appendHill()
-        self.appendHill()
+        for hill in hills {
+            scene.addChild(hill)
+        }
     }
     
     func update() {
@@ -48,23 +49,47 @@ class World: NSObject {
             let hill = object as Hill
             hill.position = CGPointMake(hill.position.x - dilloPositionDifference, hill.position.y)
         }
+        updateCoins()
         dillo.position = CGPointMake(dilloPosition,  dillo.position.y)
-        if ((hills[0] as Hill).position.x < -1000.0) {
-            popHill()
+        for hill in hills {
+            if (hill.position.x < -1000.0) {
+                popHill()
+            }
         }
     }
     
-    func appendHill() {
-        let lastHill = (hills.lastObject as Hill)
-        let hill = Hill(parentFrame: CGRectMake(lastHill.position.x + 500, lastHill.position.y, lastHill.size.width, lastHill.size.height))
-        hills.addObject(hill)
-        scene.addChild(hill)
+    func updateCoins() {
+        while coins.count < 10 {
+            coins.addObject(coinPool.firstObject!)
+            coinPool.removeObjectAtIndex(0)
+            (coins.lastObject as Coin).position.x = CGFloat(arc4random_uniform(1000)) + 1000
+            (coins.lastObject as Coin).position.y = CGFloat(arc4random_uniform(200)) + 400
+        }
+        let dilloPositionDifference = dillo.position.x - dilloPosition
+        for obj in coins {
+            let coin = obj as Coin
+            coin.position.x = coin.position.x - dilloPositionDifference
+            if coin.position.x < -1000 {
+                coins.removeObject(coin)
+                coinPool.addObject(coin)
+            }
+        }
     }
     
     func popHill() {
-        let hill = hills.firstObject as Hill
-        hills.removeObject(hill)
-        hill.position = CGPointMake((hills.lastObject as Hill).position.x + 550, 235)
-        hills.addObject(hill)
+        var minHill : Hill
+        var maxHill : Hill
+        (minHill, maxHill) = minMaxHills()
+        minHill.position = CGPointMake(maxHill.position.x + 550, 235)
+    }
+    
+    func minMaxHills() -> (minHill: Hill, maxHill: Hill) {
+        var minHill = hills.first!
+        var maxHill = hills.first!
+        for hill in hills {
+            minHill = minHill.position.x > (hill as Hill).position.x ? hill : minHill
+            maxHill = maxHill.position.x < (hill as Hill).position.x ? hill : maxHill
+        }
+        return (minHill, maxHill)
     }
 }
